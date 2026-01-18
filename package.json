@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "cloudflareDeploy": "npx wrangler deploy "
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "next": "15.5.9",
