@@ -35,10 +35,6 @@ const getCoverageColorScheme = (coverage: number) => {
   }
 };
 
-export const IntroductionMeta = () => {
-  return <div></div>;
-};
-
 export const CustomMeta = ({ of }: any) => {
   const resolvedOf = useOf(of || "story", ["story", "meta"]);
   switch (resolvedOf.type) {
