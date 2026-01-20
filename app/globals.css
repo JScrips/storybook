@@ -11,18 +11,27 @@
   --foreground: #171717;
 }
 
+/* Dark mode via class (for Storybook toolbar toggle) */
+:root.dark,
+[data-theme="dark"],
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+/* Dark mode via system preference (fallback) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
