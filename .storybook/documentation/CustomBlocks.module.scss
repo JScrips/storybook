@@ -200,3 +200,30 @@
     text-decoration: underline;
   }
 }
+
+// .tab {
+//   padding: 8px 16px;
+//   border-radius: 6px;
+//   cursor: pointer;
+//   background: transparent;
+//   border: 1px solid transparent;
+//   color: #666;
+//   font-weight: 500;
+//   transition: all 0.2s ease;
+
+//   &:hover {
+//     background: #f0f0f0;
+//     color: #333;
+//   }
+
+//   &:focus {
+//     outline: 2px solid #1a73e8;
+//     outline-offset: 2px;
+//   }
+
+//   &[data-selected] {
+//     background: #1a73e8;
+//     color: #fff;
+//     border-color: #1a73e8;
+//   }
+// }

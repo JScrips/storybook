@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import { Button as RACButton } from "react-aria-components";
+import type { ButtonProps } from "./Button.d";
 
-export function Button(props: any) {
+export function Button(props: ButtonProps) {
   return (
     <RACButton
       {...props}

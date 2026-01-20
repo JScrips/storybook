@@ -1,6 +1,6 @@
 import type { SyntheticEvent, JSX } from "react";
-
-export type ButtonProps = {
+import type { AriaAttributes } from "../../../ariaAttributes.d";
+export type ButtonProps = AriaAttributes & {
   /**
    * A unique identifier for the Button.
    */

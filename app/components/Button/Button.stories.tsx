@@ -1,12 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { Button } from "./Button";
+import { ButtonProps } from "./Button.argTypes";
+
 import Overview from "./README.mdx";
 
 export default {
   title: "Core Components/Button",
   component: Button,
-  subComponents: {},
+  subComponents: {
+    ButtonProps,
+  },
   parameters: {
     codeCoverage: 100,
     design: {
