@@ -1,7 +1,9 @@
 import { locale } from "./Locale";
+import { theme } from "./theme";
 
 const globalTypes = {
-    locale
-}
+  locale,
+  ...theme,
+};
 
-export {globalTypes}
+export { globalTypes };
