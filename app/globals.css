@@ -24,9 +24,6 @@ SETTING VARIABLES
   --app-border-default: #dad7d6;
 }
 
-/* Dark mode via class (for Storybook toolbar toggle) */
-:root.dark,
-[data-theme="dark"],
 .dark {
   --app-bg-default: #120d0c;
   --app-bg-surface: #1a1411;
