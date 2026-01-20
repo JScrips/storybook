@@ -1,5 +1,5 @@
 import { useOf, Canvas, Stories, Source } from "@storybook/addon-docs/blocks";
-import { Tabs } from "react-aria-components";
+import { Button } from "react-aria-components";
 // Imported Package JSON INFO
 import PackageJson from "../../package.json";
 // CSS For Custom Blocks
@@ -155,7 +155,7 @@ export const CustomMeta = ({ of }: any) => {
               </div>
             </div>
             <div className={styles.buttonBar}>
-              <button
+              <Button
                 id="github"
                 onClick={() => {
                   window.open(
@@ -165,7 +165,7 @@ export const CustomMeta = ({ of }: any) => {
                 }}
               >
                 Github
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -230,7 +230,7 @@ export const CustomFeedback = ({ of }: any) => {
     case "story": {
       return (
         <div>
-          <span>
+          <span className="text-black">
             Get Live Support. Help Us Improve
             {formatComponentTitle(resolvedOf.story.title)}
             and The Component Library by leaving feedback!
@@ -239,7 +239,7 @@ export const CustomFeedback = ({ of }: any) => {
           <br />
           <div className={styles["link-list"]}>
             <a className={styles["link-item"]} href={"#"} target="_blank">
-              Test
+              Give Feedback
             </a>
           </div>
         </div>

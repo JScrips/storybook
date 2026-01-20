@@ -26,8 +26,6 @@ const AutoDocs = () => {
     <div className={styles.mdxContent}>
       <CustomMeta />
       <br />
-      <hr />
-      <br />
       <Tabs className="text-black">
         <TabList aria-label="Tabs" className="flex gap-2">
           <Tab id="Overview" className={tabClassName}>
@@ -92,8 +90,6 @@ const AutoDocs = () => {
               />
             </div>
           </TabPanel>
-        </TabPanels>
-        <TabPanels>
           <TabPanel id="Examples">
             <div>
               <div className={`${styles.chip} ${styles.examples}`}>

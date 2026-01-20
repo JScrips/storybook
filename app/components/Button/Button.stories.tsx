@@ -27,6 +27,5 @@ export const Primary: Story = {
   args: {
     id: "example-button",
     variant: "primary",
-    children: "Test",
   },
 };
