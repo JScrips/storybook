@@ -70,7 +70,7 @@ export type CommonButtonProps = AriaAttributes & {
    * - `destructive`: Indicates a potentially harmful action.
    * - `quiet`: Minimal styling for subtle actions.
    */
-  variant: "primary" | "secondary" | "destructive" | "quiet";
+  variant?: "primary" | "secondary" | "destructive" | "quiet";
 
   /** Callback function invoked when the button is clicked. */
   onClick?: (event: SyntheticEvent<EventTarget>) => void;
@@ -98,7 +98,7 @@ export type IconOnlyButtonProps = CommonButtonProps &
 export type TextButtonProps = CommonButtonProps &
   AriaAttributes & {
     /** The text content displayed in the button. */
-    text: string;
+    text?: string;
     /** Optional icon element to display alongside the text. */
     icon?: AriaAttributes & JSX.Element;
     /** Position of the icon relative to the text (leading or trailing). */
