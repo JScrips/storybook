@@ -1,4 +1,4 @@
-import type { SyntheticEvent, JSX } from "react";
+import type { ReactNode, SyntheticEvent, JSX } from "react";
 import type { AriaAttributes } from "../../../ariaAttributes.d";
 
 /**
@@ -54,7 +54,8 @@ export type CommonButtonProps = AriaAttributes & {
   /** Unique identifier for the button. */
   id: string;
 
-  variant?: ButtonVariant;
+  /** The content to render inside the button (text, icons, or both). */
+  children?: ReactNode;
 
   /** Minimum width of the button (e.g., "100px", "50%"). */
   minWidth?: SpacingStringType;
@@ -72,7 +73,7 @@ export type CommonButtonProps = AriaAttributes & {
   variant: "primary" | "secondary" | "destructive" | "quiet";
 
   /** Callback function invoked when the button is clicked. */
-  onClick: (event: SyntheticEvent<EventTarget>) => void;
+  onClick?: (event: SyntheticEvent<EventTarget>) => void;
 };
 
 /**
