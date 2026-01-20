@@ -6,17 +6,36 @@
 @plugin "tailwindcss-react-aria-components";
 @plugin "tailwindcss-animate";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/**
+=================
+SETTING VARIABLES
+=================
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --app-bg-default: #f0f0f0;
+  --app-bg-surface: #e5e2e1;
+  --app-primary: #675048;
+  --app-primary-hover: #483832;
+  --app-button-text: #fafafa;
+  --app-text-default: #211a17;
+  --app-text-muted: #4c4848;
+  --app-border-default: #dad7d6;
 }
 
 /* Dark mode via class (for Storybook toolbar toggle) */
 :root.dark,
 [data-theme="dark"],
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --app-bg-default: #120d0c;
+  --app-bg-surface: #1a1411;
+  --app-primary: #a3a1a0;
+  --app-primary-hover: #888686;
+  --app-button-text: #141414;
+  --app-text-default: #a3a3a3;
+  --app-text-muted: #ab9992;
+  --app-border-default: #222222;
 }
 
 /* Dark mode via system preference (fallback) */
@@ -27,11 +46,20 @@
   }
 }
 
+/**
+=================
+USING VARIABLES
+=================
+*/
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-default: var(--app-bg-default);
+  --color-buttonText: var(--app-button-text);
+  --color-surface: var(--app-bg-surface);
+  --color-primary: var(--app-primary);
+  --color-primary-hover: var(--app-primary-hover);
+  --color-defaultText: var(--app-text-default);
+  --color-muted: var(--app-text-muted);
+  --color-defaultBorder: var(--app-border-default);
 }
 
 body {

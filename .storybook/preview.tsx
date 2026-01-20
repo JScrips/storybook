@@ -1,12 +1,23 @@
 import "../app/globals.css";
 
-import type { Preview } from "@storybook/nextjs-vite";
+import { Preview } from "@storybook/nextjs-vite";
+import { ReactRenderer } from "@storybook/react";
+import { withThemeByClassName } from "@storybook/addon-themes";
 import { decorators } from "./decorators/decorators";
 import { globalTypes } from "./global/globalTypes";
 import { parameters } from "./parameters/parameters";
 
 const preview: Preview = {
-  decorators,
+  decorators: [
+    ...decorators,
+    withThemeByClassName<ReactRenderer>({
+      themes: {
+        light: "",
+        dark: "dark",
+      },
+      defaultTheme: "light",
+    }),
+  ],
   globalTypes,
   parameters: {
     ...parameters,
